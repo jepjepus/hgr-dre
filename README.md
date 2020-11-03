@@ -20,7 +20,9 @@ http://www.juntadeandalucia.es/educacion/cga/portal/?p=7791
     git clone https://github.com/aosucas499/hgr-dre.git
 
     cd hgr-dre
-
+    
+    chmod +x install-hgr-dre
+    
     ./install-hgr-dre
     
     ./hgr-server (servidor HGR)
