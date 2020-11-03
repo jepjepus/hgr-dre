@@ -1,0 +1,25 @@
+#! /bin/bash
+
+sudo rm ~/.config/autostart/hgr.desktop
+
+sudo docker stop hgr-server
+
+sudo docker rm hgr-server
+
+sudo docker stop hgr-client
+
+sudo docker rm hgr-client
+
+sudo docker rmi aosucas499/guadalinex:hgr
+
+sudo docker rmi aosucas499/guadalinex:sigala
+
+sudo docker rmi aosucas499/guadalinex:next
+
+sudo docker rmi aosucas499/guadalinex:edu
+
+sudo docker rmi aosucas499/guadalinex
+
+sudo delgroup docker
+
+sudo apt purge --remove docker-ce docker-ce-cli containerd.io -y

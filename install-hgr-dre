@@ -1,0 +1,39 @@
+#! /bin/bash
+
+# Install docker
+
+# Variable distribución, esta muestra la distribución necesaria para instalar docker
+
+distribucion=$(lsb_release -cs)
+
+# Este script funciona en Ubuntu 18.04, bionic. Para Mint 20, cambiar por la siguiente:
+
+#distribucion=focal
+
+echo $distribucion
+#sudo apt update
+sudo apt install -f
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+sudo apt install -f
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $distribucion stable"
+sudo apt-key fingerprint 0EBFCD88
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io -y
+clear
+sudo usermod -aG docker $USER
+
+# Descarga la imagen smartdre
+sudo docker pull aosucas499/guadalinex:hgr
+
+# Ejecutar y probar contenedor
+chmod +x hgr-server
+chmod +x hgr-client
+cp hgr.desktop ~/.config/autostart/
+#chmod +x ~/.config/autostart/smartdre.desktop
+clear
+echo ""
+echo "Reinicia el sistema o cierra la sesión para que funcione"
+echo ""
+
+
