@@ -1,0 +1,18 @@
+#!/bin/bash
+ARG REPO1=http://centros.edu.guadalinex.org/Edu/catcorner
+ARG REPO2=http://centros.edu.guadalinex.org/Edu//catcornerdda
+ARG REPO3=http://centros.edu.guadalinex.org/Edu//catcornerdda2
+ARG REPO4=http://centros.edu.guadalinex.org/Edu/catcornersc
+
+sudo apt-get update
+echo exit 0 > /usr/sbin/policy-rc.d 
+mkdir /usr/share/applications -p 
+mkdir /usr/share/desktop-directories -p 
+echo "APT { Get { AllowUnauthenticated "1"; }; };" > /etc/apt/apt.conf.d/99allow_unauth 
+apt-get update && apt-get install nano wget -y
+echo deb $REPO1 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex.list
+echo deb $REPO2 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex2.list
+echo deb $REPO3 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex3.list
+echo deb $REPO4 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex4.list
+apt-get update
+apt-get install cga-hga -y
