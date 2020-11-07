@@ -27,7 +27,7 @@ http://www.juntadeandalucia.es/educacion/cga/portal/?p=7791
     
     ./hgr-server (servidor HGR)
     
-    ./hgr-client (cliente HGR)
+    ./hgr (cliente HGR)
 
 
 ## FILES description
@@ -41,9 +41,9 @@ http://www.juntadeandalucia.es/educacion/cga/portal/?p=7791
 File necessary to boot the container when the session starts. It will be copied to folder "~/.config/autostart"
 
 ### hgr-server
-It runs the the docker container and the hgr-server application taking into account if the container was created or not.
+It runs the the hgr-server application taking into account if the container was created or not.
 
-### hgr-client
+### hgr
 It runs the the docker container and the hgr-client application taking into account if the container was created or not.
 >## IMPORTANT
  Don't move this script from the folder "~/hgr-dre/" or it won't work

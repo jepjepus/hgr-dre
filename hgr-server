@@ -5,13 +5,14 @@ xhost +local:root
 # Ejecutar el contenedor comprobando si ha sido creado o no
 
 #variable nombre contenedor
-container_name=hgr-server
+container_name=hgr-client
 
 #variable nombre imagen
 image_name=aosucas499/guadalinex:hgr
 
+
 #variable carpeta configuración para compartir con el contenedor
-STORAGE_FOLDER=~/hgr-server
+STORAGE_FOLDER=~/hgr-client
 
 if [ -d "$STORAGE_FOLDER" ]; then
     echo "Carpeta $STORAGE_FOLDER existe"
@@ -20,15 +21,21 @@ else
     mkdir $STORAGE_FOLDER
 fi
 
-docker stop $container_name
+#docker stop $container_name
 
 if docker ps -a --format '{{.Names}}' | grep -Eq "^${container_name}\$"; then
-   docker start ${container_name}
+   docker start ${container_name} && docker exec -d hgr-client /usr/bin/cga-hgr-server   
 else
-#docker run -it --privileged --net=host --user=$(id -u $USER):$(id -g $USER) -e DISPLAY="$DISPLAY" --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --workdir="/home/$USER" --volume="$STORAGE_FOLDER:/home/$USER:rw" --volume="/etc/group:/etc/group:ro" --volume="/etc/passwd:/etc/passwd:ro" --volume="/etc/shadow:/etc/shadow:ro" --volume="/etc/sudoers.d:/etc/sudoers.d:ro" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --name ${container_name} ${image_name} bash
 
-docker run -d --privileged --net=host -e DISPLAY="$DISPLAY" --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$STORAGE_FOLDER:/root:rw" --name ${container_name} ${image_name} /usr/bin/cga-hgr-server
+docker run -d --privileged --net=host -e DISPLAY="$DISPLAY" --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --name ${container_name} ${image_name} &&  docker exec -d hgr-client /usr/bin/cga-hgr-server
+
+#docker run -d --privileged --net=host --user=$(id -u $USER):$(id -g $USER) -e DISPLAY="$DISPLAY" --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --workdir="/home/$USER" --volume="$STORAGE_FOLDER:/home/$USER:rw" --volume="/etc/group:/etc/group:ro" --volume="/etc/passwd:/etc/passwd:ro" --volume="/etc/shadow:/etc/shadow:ro" --volume="/etc/sudoers.d:/etc/sudoers.d:ro" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --name ${container_name} ${image_name} /usr/bin/cga-hgr-server
+
+#docker run -d --privileged --net=host -e DISPLAY="$DISPLAY" --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$STORAGE_FOLDER:/root:rw" --name ${container_name} ${image_name} 
 fi
+
+
+
 #/etc/init.d/ejabberd-cgaconfig start &&
 #apuntes
 
