@@ -20,7 +20,7 @@ else
     mkdir $STORAGE_FOLDER
 fi
 
-docker stop $container_name
+#docker stop $container_name && docker rm $container_name
 
 if docker ps -a --format '{{.Names}}' | grep -Eq "^${container_name}\$"; then
    docker start ${container_name}
