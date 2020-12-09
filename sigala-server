@@ -1,0 +1,34 @@
+#! /bin/bash
+# Dejar al sistema docker que acceda al entorno gráfico
+xhost +local:root
+
+# Ejecutar el contenedor comprobando si ha sido creado o no
+
+#variable nombre contenedor
+container_name=sigala-server
+
+#variable nombre imagen
+image_name=aosucas499/guadalinex:sigala
+
+#variable carpeta configuración para compartir con el contenedor
+STORAGE_FOLDER=~/sigala-server
+
+if [ -d "$STORAGE_FOLDER" ]; then
+    echo "Carpeta $STORAGE_FOLDER existe"
+else
+    echo "Creando carpeta $STORAGE_FOLDER"
+    mkdir $STORAGE_FOLDER
+fi
+
+docker stop $container_name && docker rm $container_name
+
+if docker ps -a --format '{{.Names}}' | grep -Eq "^${container_name}\$"; then
+   docker start ${container_name}
+else
+
+docker run -it --privileged --net=host --user=$(id -u $USER):$(id -g $USER) -e DISPLAY="$DISPLAY" --env DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" --volume /run/user/$UID/bus:/run/user/$UID/bus --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --workdir="/home/$USER" --volume="$STORAGE_FOLDER:/home/$USER:rw" --volume="/etc/group:/etc/group:ro" --volume="/etc/passwd:/etc/passwd:ro" --volume="/etc/shadow:/etc/shadow:ro" --volume="/etc/sudoers.d:/etc/sudoers.d:ro" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --name ${container_name} ${image_name} bash
+
+#docker run -d --privileged --net=host -e DISPLAY="$DISPLAY" --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="$STORAGE_FOLDER:/root:rw" --name ${container_name} ${image_name} /usr/bin/cga-hgr-server
+fi
+#
+#--env DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" --volume /run/user/1000/bus:/run/user/1000/bus --volume="/run/dbus/sytem_bus_socket:/run/dbus/system_bus_socket"
