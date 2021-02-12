@@ -22,8 +22,6 @@ sudo echo deb $REPO5 precise main >> /etc/apt/sources.list.d/guadalinex5.list
 # Para la versión de la tablet de 9v cargador negro, los repos 2 y 6
 #sudo echo deb $REPO2 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex2.list
 #sudo echo deb $REPO6 precise main >> /etc/apt/sources.list.d/guadalinex6.list
-wget http://guadalinex-edu.cica.es/Edu/catcornerdda/pool/main/g/guadalinexedu-keyring/guadalinexedu-keyring_0.1-10_all.deb
-dpkg -i guadalinexedu-keyring_0.1-10_all.deb
 
 # Para la versión de la tablet de 5v cargador blanco, los repos 3 y 7
 #sudo echo deb $REPO3 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex3.list
@@ -31,6 +29,10 @@ dpkg -i guadalinexedu-keyring_0.1-10_all.deb
 
 # Descomentar si hay que borrar los repos de la distro actual
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.save 
+
+#firma para instalar paquetes Guadalinex
+wget http://guadalinex-edu.cica.es/Edu/catcornerdda/pool/main/g/guadalinexedu-keyring/guadalinexedu-keyring_0.1-10_all.deb
+dpkg -i guadalinexedu-keyring_0.1-10_all.deb
 
 sudo rm *.deb
 sudo apt-get update
