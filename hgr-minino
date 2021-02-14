@@ -15,28 +15,28 @@ sudo mkdir /usr/share/desktop-directories -p
 
 # crear repos guadalinex
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.save 
-sudo touch guadalinex.list
-sudo touch guadalinex2.list
-sudo touch guadalinex3.list
-sudo touch guadalinex4.list
-sudo touch guadalinex5.list
-sudo touch guadalinex6.list
-sudo touch guadalinex7.list
+touch guadalinex.list
+touch guadalinex2.list
+touch guadalinex3.list
+touch guadalinex4.list
+touch guadalinex5.list
+touch guadalinex6.list
+touch guadalinex7.list
 
 # Para Guadalinex edu activamos repos 1 y 5.
-#sudo echo deb $REPO1 guadalinexedu main > guadalinex.list
-#sudo echo deb $REPO5 precise main > guadalinex5.list
+#echo deb $REPO1 guadalinexedu main > guadalinex.list
+#echo deb $REPO5 precise main > guadalinex5.list
 
 # Para la versión de la tablet de 9v cargador negro, los repos 2 y 6
-sudo echo deb $REPO2 guadalinexedu main > guadalinex2.list
-sudo echo deb $REPO6 precise main > guadalinex6.list
+echo deb $REPO2 guadalinexedu main > guadalinex2.list
+echo deb $REPO6 precise main > guadalinex6.list
 
 # Para la versión de la tablet de 5v cargador blanco, los repos 3 y 7
-#sudo echo deb $REPO3 guadalinexedu main > guadalinex3.list
-#sudo echo deb $REPO7 precise main > guadalinex7.list
+#echo deb $REPO3 guadalinexedu main > guadalinex3.list
+#echo deb $REPO7 precise main > guadalinex7.list
 
 #repo común 
-sudo echo deb $REPO4 guadalinexedu main > guadalinex4.list
+echo deb $REPO4 guadalinexedu main > guadalinex4.list
 
 #mover repos guadalinex
 sudo mv *.list /etc/apt/sources.list
