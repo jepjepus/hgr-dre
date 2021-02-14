@@ -12,25 +12,26 @@ sudo apt-get update
 sudo mkdir /usr/share/applications -p 
 sudo mkdir /usr/share/desktop-directories -p 
 #sudo echo "APT { Get { AllowUnauthenticated "1"; }; };" > /etc/apt/apt.conf.d/99allow_unauth 
-sudo apt-get install nano screen -y
+
+# Descomentar si hay que borrar los repos de la distro actual
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.save 
+sudo touch sources.list
+sudo mv sources.list /etc/apt/
 
 # Para Guadalinex edu activamos repos 1 y 5.
-sudo echo deb $REPO1 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex.list
+sudo echo deb $REPO1 guadalinexedu main > /etc/apt/sources.list.d/guadalinex.list
 sudo echo deb $REPO5 precise main >> /etc/apt/sources.list.d/guadalinex5.list
 
 # Para la versión de la tablet de 9v cargador negro, los repos 2 y 6
-#sudo echo deb $REPO2 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex2.list
+#sudo echo deb $REPO2 guadalinexedu main > /etc/apt/sources.list.d/guadalinex2.list
 #sudo echo deb $REPO6 precise main >> /etc/apt/sources.list.d/guadalinex6.list
 
 # Para la versión de la tablet de 5v cargador blanco, los repos 3 y 7
-#sudo echo deb $REPO3 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex3.list
+#sudo echo deb $REPO3 guadalinexedu main > /etc/apt/sources.list.d/guadalinex3.list
 #sudo echo deb $REPO7 precise main >> /etc/apt/sources.list.d/guadalinex7.list
 
 #repo común 
 sudo echo deb $REPO4 guadalinexedu main >> /etc/apt/sources.list.d/guadalinex4.list
-
-# Descomentar si hay que borrar los repos de la distro actual
-sudo mv /etc/apt/sources.list /etc/apt/sources.list.save 
 
 #firma para instalar paquetes Guadalinex
 wget http://guadalinex-edu.cica.es/Edu/catcornerdda/pool/main/g/guadalinexedu-keyring/guadalinexedu-keyring_0.1-10_all.deb
