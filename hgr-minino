@@ -43,7 +43,7 @@ sudo mv *.list /etc/apt/sources.list.d/
 
 #firma para instalar paquetes Guadalinex
 wget http://guadalinex-edu.cica.es/Edu/catcornerdda/pool/main/g/guadalinexedu-keyring/guadalinexedu-keyring_0.1-10_all.deb
-dpkg -i guadalinexedu-keyring_0.1-10_all.deb
+sudo dpkg -i guadalinexedu-keyring_0.1-10_all.deb
 
 sudo rm *.deb
 sudo apt-get update
