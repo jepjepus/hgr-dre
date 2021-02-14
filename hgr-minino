@@ -25,7 +25,7 @@ touch guadalinex7.list
 
 # Para Guadalinex edu activamos repos 1 y 5.
 #echo deb $REPO1 guadalinexedu main > guadalinex.list
-#echo deb $REPO5 precise main > guadalinex5.list
+echo deb $REPO5 precise main > guadalinex5.list
 
 # Para la versión de la tablet de 9v cargador negro, los repos 2 y 6
 echo deb $REPO2 guadalinexedu main > guadalinex2.list
