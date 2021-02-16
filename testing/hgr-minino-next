@@ -11,6 +11,7 @@
 
 
   wget http://centros.edu.guadalinex.org/Edu/fenix/pool/main/e/erlang/erlang-asn1_18.3-dfsg-1ubuntu3_i386.deb -O /tmp/erlang-asn1_18.3-dfsg-1ubuntu3_i386.deb
+  wget http://centros.edu.guadalinex.org/Edu/fenix/pool/main/e/erlang/erlang-base_18.3-dfsg-1ubuntu3_i386.deb -O /tmp/erlang-base_18.3-dfsg-1ubuntu3_i386.deb
   wget http://centros.edu.guadalinex.org/Edu/fenix/pool/main/e/erlang/erlang-crypto_18.3-dfsg-1ubuntu3_i386.deb -O /tmp/erlang-crypto_18.3-dfsg-1ubuntu3_i386.deb
   wget http://centros.edu.guadalinex.org/Edu/fenix/pool/main/e/erlang/erlang-edoc_18.3-dfsg-1ubuntu3_i386.deb -O /tmp/erlang-edoc_18.3-dfsg-1ubuntu3_i386.deb
   wget http://centros.edu.guadalinex.org/Edu/fenix/pool/main/e/erlang/erlang-inets_18.3-dfsg-1ubuntu3_i386.deb -O /tmp/erlang-inets_18.3-dfsg-1ubuntu3_i386.deb
@@ -44,6 +45,7 @@
 	# ---
 
   sudo dpkg -i /tmp/erlang-asn1_18.3-dfsg-1ubuntu3_i386.deb
+  sudo dpkg -i /tmp/erlang-base_18.3-dfsg-1ubuntu3_i386.deb
   sudo dpkg -i /tmp/erlang-crypto_18.3-dfsg-1ubuntu3_i386.deb
   sudo dpkg -i /tmp/erlang-edoc_18.3-dfsg-1ubuntu3_i386.deb
   sudo dpkg -i /tmp/erlang-inets_18.3-dfsg-1ubuntu3_i386.deb
