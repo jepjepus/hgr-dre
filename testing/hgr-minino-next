@@ -3,7 +3,7 @@
 # Instalamos dependencias
 	# ---
 
-	sudo apt install ssh python-avahi python-qt4 python-qt4-dbus python-netifaces python-sleekxmpp python-webdav x11vnc xtightvncviewer xvnc4viewer vlc curl libc-ares2 rlwrap avahi-daemon setcd -y
+	sudo apt install ssh python-avahi python-qt4 python-qt4-dbus python-netifaces python-sleekxmpp python-webdav x11vnc xtightvncviewer xvnc4viewer vlc ejabberd curl libc-ares2 rlwrap avahi-daemon setcd -y
 
 	# Descargamos los paquetes de Guadalinex que necesitamos
 	# ---
