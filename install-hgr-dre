@@ -28,8 +28,8 @@ sudo docker pull aosucas499/guadalinex:hgr
 
 # Ejecutar y probar contenedor
 chmod +x hgr-server
-chmod +x hgr-client
-cp hgr.desktop ~/.config/autostart/
+chmod +x hgr
+sudo cp hgr.desktop /etc/xdg/autostart
 #chmod +x ~/.config/autostart/smartdre.desktop
 clear
 echo ""
