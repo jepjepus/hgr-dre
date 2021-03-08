@@ -15,7 +15,11 @@ http://www.juntadeandalucia.es/educacion/cga/portal/?p=7791
 
 ## USAGE
 
-    cd ~ 
+    cd ~
+    
+    sudo apt-get update-y
+    
+    sudo apt-get install git -y
 
     git clone https://github.com/aosucas499/hgr-dre.git
 
