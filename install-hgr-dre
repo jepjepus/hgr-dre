@@ -24,6 +24,9 @@ clear
 sudo usermod -aG docker $USER
 
 # Descarga la imagen smartdre
+echo ""
+echo "Descargando la imagen docker, sea paciente"
+echo ""
 sudo docker pull aosucas499/guadalinex:hgr
 
 # Ejecutar y probar contenedor
