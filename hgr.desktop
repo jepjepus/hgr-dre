@@ -7,3 +7,4 @@ Hidden=false
 Name[es_ES]=hgr
 Comment[es_ES]=Sin descripción
 X-GNOME-Autostart-Delay=5
+Icon=/usr/share/icons/cga-hgr-server.svg
