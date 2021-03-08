@@ -1,6 +1,10 @@
 #! /bin/bash
 
-sudo rm ~/.config/autostart/hgr.desktop
+sudo rm /etc/xdg/hgr.desktop
+
+sudo rm  /usr/share/applications/hgr.desktop
+
+sudo rm  /usr/share/applications/hgr-server.desktop
 
 sudo docker stop hgr-server
 
