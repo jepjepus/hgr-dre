@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c ~/hgr-dre/hgr-server
+NoDisplay=false
+Hidden=false
+Name[es_ES]=hgr-server
+Comment[es_ES]=Sin descripción
+Icon=/usr/share/icons/cga-hgr-server.svg
+Categories=Education;Utility
