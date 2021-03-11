@@ -12,7 +12,7 @@
 	sudo mv /etc/apt/sources.list /etc/apt/minino-tde-jessie.list
 	sudo mv minino-tde-stretch.list /etc/apt/sources.list
 	sudo apt-get update
-	sudo apt-get install -f curl
+	sudo apt-get install -y curl
 
 	# Instalamos repositorios guadalinex-next
 	#
