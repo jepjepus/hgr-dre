@@ -30,10 +30,27 @@
 	sudo apt-get install -y python-sleekxmpp
 	sudo apt-get install -y cga-hga
 
-	#Instalamos repositorios debian jessie y dejamos minino en su punto inicial
+	# Instalamos repositorios debian jessie y dejamos minino en su punto inicial
 	#
 	sudo mv /etc/apt/minino-tde-jessie.list /etc/apt/sources.list
 	sudo apt-get update
+	
+	# Añadimos permisos sudo a la aplicación para que funcione bien con docker y versiones antiguas de guadalinex
+	#
+	
+	# Añadimos permisos sudo a cualquier usuario del sistema, aunque no tenga derechos de administrador
+	#
+	
+	cd /home/$USER
+	sudo cp /etc/sudoers.d/ejabberd-cgaconfig .
+	sudo rm /etc/sudoers.d/ejabberd-cgaconfig
+	sudo chown $USER:$USER ejabberd-cgaconfig 
+	sudo chmod 765 ejabberd-cgaconfig
+	sudo echo "ALL     ALL=NOPASSWD:/usr/bin/cga-hgr-client" >> ejabberd-cgaconfig
+	sudo echo "ALL     ALL=NOPASSWD:/usr/bin/cga-hgr-server" >> ejabberd-cgaconfig
+	sudo chown root:root ejabberd-cgaconfig
+	sudo chmod 0440 ejabberd-cgaconfig
+	sudo mv ejabberd-cgaconfig /etc/sudoers.d/
 
 # Creamos parche a aplicar
     # ---
