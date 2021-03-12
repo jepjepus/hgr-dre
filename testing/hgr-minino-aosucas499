@@ -41,7 +41,7 @@
 	
 	sudo sed -i "s/Exec=/Exec=sudo /g" "/usr/share/applications/cga-hgr-client.desktop"
 	sudo sed -i "s/Exec=/Exec=sudo /g" "/usr/share/applications/cga-hgr-server.desktop"
-	sudo sed -i "s/&&/&& sudo /g" "/etc/xdg/autostart/hgr-autostart.desktop"
+	sudo sed -i "s/&&/\&\& sudo /g" /etc/xdg/autostart/hgr-autostart.desktop
 
 	
 	# Añadimos permisos sudo a cualquier usuario del sistema, aunque no tenga derechos de administrador
