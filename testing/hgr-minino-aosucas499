@@ -3,21 +3,22 @@
 	# Instalamos dependencias
 	# ---
 
-	sudo apt install -y ssh python-avahi python-qt4 python-qt4-dbus python-netifaces python-sleekxmpp python-webdav x11vnc xtightvncviewer xvnc4viewer vlc libc-ares2 rlwrap avahi-daemon setcd python-dnspython libnss-myhostname
+	sudo apt install -y ssh python-avahi python-qt4 python-qt4-dbus python-netifaces python-sleekxmpp python-webdav x11vnc xtightvncviewer xvnc4viewer vlc libc-ares2 rlwrap avahi-daemon setcd python-dnspython libnss-myhostname curl
 
 	#Instalamos repositorios debian stretch e instalamos curl
-	#
+	# No es necesario por ahora, podemos usar el de debian jessie, pero dejamos el método por si se necesita descargar algo de debian stretch
 
-	wget https://raw.githubusercontent.com/aosucas499/sources/main/minino-tde-stretch.list
-	sudo mv /etc/apt/sources.list /etc/apt/minino-tde-jessie.list
-	sudo mv minino-tde-stretch.list /etc/apt/sources.list
-	sudo apt-get update
-	sudo apt-get install -y curl
+	#wget https://raw.githubusercontent.com/aosucas499/sources/main/minino-tde-stretch.list
+	#sudo mv /etc/apt/sources.list /etc/apt/minino-tde-jessie.list
+	#sudo mv minino-tde-stretch.list /etc/apt/sources.list
+	#sudo apt-get update
+	#sudo apt-get install -y curl
 
 	# Instalamos repositorios guadalinex-next
 	#
 	
 	wget https://raw.githubusercontent.com/aosucas499/sources/main/guadalinex-next.list
+	sudo mv /etc/apt/sources.list /etc/apt/minino-tde-jessie.list
 	sudo mv guadalinex-next.list /etc/apt/sources.list
 	wget http://centros.edu.guadalinex.org/Edu/fenix/pool/main/g/guadalinexedu-keyring/guadalinexedu-keyring_0.2-1_all.deb
 	sudo dpkg -i guadalinexedu-keyring_0.2-1_all.deb
