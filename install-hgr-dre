@@ -82,8 +82,8 @@ sudo cp hgr-server.desktop /usr/share/applications
 
 #chmod +x ~/.config/autostart/smartdre.desktop
 clear
-echo ""
-echo "Reinicia el sistema o cierra la sesión para que funcione"
-echo ""
 
-
+echo ""
+echo "Encontrará la aplicación HGR-Server en el menú Educación"
+notify-send "Encontrará la aplicación HGR-Server en el menú Educación"
+echo ""
