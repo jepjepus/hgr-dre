@@ -84,6 +84,6 @@ sudo cp hgr-server.desktop /usr/share/applications
 clear
 
 echo ""
-echo "Encontrará la aplicación HGR-Server en el menú Educación"
-notify-send "Encontrará la aplicación HGR-Server en el menú Educación"
+echo "Reinicie el sistema y la encontrará en el menú Educación"
+notify-send "Reinicie el sistema y la encontrará en el menú Educación"
 echo ""
