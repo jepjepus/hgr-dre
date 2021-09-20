@@ -11,7 +11,7 @@ tag sigala: Unstable Sigala applications using Repositories from Guadalinex edu 
 
 Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
-
+[Más info del proyecto](https://github.com/aosucas499/hgr-dre/wiki)
 
 ## USAGE
 
