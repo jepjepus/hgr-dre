@@ -11,7 +11,7 @@ tag sigala: Unstable Sigala applications using Repositories from Guadalinex edu 
 
 Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
-http://www.juntadeandalucia.es/educacion/cga/portal/?p=7791
+
 
 ## USAGE
 
@@ -34,25 +34,13 @@ http://www.juntadeandalucia.es/educacion/cga/portal/?p=7791
     ./hgr (cliente HGR)
 
 
-## FILES description
 
-### install-hgr-dre: Run first. It installs: 
-1. Docker. 
-2. Docker image (aosucas499/guadalinex:hgr)
-3. File to boot at init session the app hgr client (it copies the file hgr.desktop to ~/.config/autostart)
 
-### hgr.desktop
-File necessary to boot the container when the session starts. It will be copied to folder "~/.config/autostart"
+Si este proyecto te ayuda, puedes invitarme a un café.
 
-### hgr-server
-It runs the the hgr-server application taking into account if the container was created or not.
 
-### hgr
-It runs the the docker container and the hgr-client application taking into account if the container was created or not.
->## IMPORTANT
- Don't move this script from the folder "~/hgr-dre/" or it won't work
- because the autoboot file finds the script in that folder
+If this project helps you,  you can give me a cup of coffee .
 
->## IMPORTANTE
- No muevas este script de la carpeta "~/hgr-dre" o no funcionará
- porque el archivo de autoarranque busca este script en esa carpeta
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=FUMT27MVTRTHJ&no_recurring=0&item_name=Proyectos+TIC+Andaluc%C3%ADa&currency_code=EUR)
+
