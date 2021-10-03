@@ -113,7 +113,7 @@ if [[ $DESKTOP = ubuntu:GNOME || $DESKTOP = ubuntu || $DESKTOP = GNOME || $DESKT
 	echo ""
 	echo -e "${AZUL}Downloading the docker image, please be patient...${NORMAL}"
 	echo ""
-  sudo docker pull aosucas499/guadalinex:hgr
+  sudo docker pull aosucas499/guadalinex:hga
 
 # Ejecutar y probar contenedor
 chmod +x hgr-server
