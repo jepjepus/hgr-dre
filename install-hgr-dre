@@ -113,13 +113,13 @@ if [[ $DESKTOP = ubuntu:GNOME || $DESKTOP = ubuntu || $DESKTOP = GNOME || $DESKT
 	echo ""
 	echo -e "${AZUL}Downloading the docker image, please be patient...${NORMAL}"
 	echo ""
-  sudo docker pull aosucas499/guadalinex:hgr
+  sudo docker pull aosucas499/guadalinex:hga
 
 # Ejecutar y probar contenedor
 chmod +x hgr-server
 chmod +x hgr
 sudo cp cga-hgr-server.svg /usr/share/icons/
-sudo cp hgr.desktop /etc/xdg/autostart
+#sudo cp hgr.desktop /etc/xdg/autostart
 sudo cp hgr.desktop /usr/share/applications
 sudo cp hgr-server.desktop /usr/share/applications
 
