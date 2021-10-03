@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo rm /etc/xdg/hgr.desktop
+sudo rm /etc/xdg/autostart/hgr.desktop
 
 sudo rm  /usr/share/applications/hgr.desktop
 
