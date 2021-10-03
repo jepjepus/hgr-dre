@@ -20,6 +20,8 @@ sudo docker rm hgr
 
 sudo docker rmi aosucas499/guadalinex:hgr
 
+sudo docker rmi aosucas499/guadalinex:hga
+
 sudo docker rmi aosucas499/guadalinex:sigala
 
 sudo docker rmi aosucas499/guadalinex:next
@@ -28,6 +30,6 @@ sudo docker rmi aosucas499/guadalinex:edu
 
 sudo docker rmi aosucas499/guadalinex
 
-#sudo delgroup docker
+sudo delgroup docker
 
 #sudo apt purge --remove docker-ce docker-ce-cli containerd.io -y
