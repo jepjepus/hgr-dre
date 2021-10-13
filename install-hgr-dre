@@ -140,8 +140,8 @@ if [[ $DESKTOP = ubuntu:GNOME || $DESKTOP = ubuntu || $DESKTOP = GNOME || $DESKT
     	sudo cp hgr-server.desktop /usr/share/applications/
 	
 # Borrar las fuentes después de instalar
-	#cd ..
-	#sudo rm -r hgr-dre
+	cd ..
+	sudo rm -r hgr-dre
 
 echo ""
 echo "Reinicie el sistema y la encontrará en el menú Educación"
