@@ -73,7 +73,7 @@ if [[ $DESKTOP = ubuntu:GNOME || $DESKTOP = ubuntu || $DESKTOP = GNOME || $DESKT
 	echo -e "${ROJO}Asking password of the user with administrations rights${NORMAL}"
 	echo ""
 	sudo echo ""
-  
+	
 # Borrando antiguos archivos de smartdre o lliurex-smart
 #
 	echo ""	
@@ -83,7 +83,7 @@ if [[ $DESKTOP = ubuntu:GNOME || $DESKTOP = ubuntu || $DESKTOP = GNOME || $DESKT
 	echo ""
 	sudo chmod +x uninstall-hgr-dre
 	sudo ./uninstall-hgr-dre
-	
+  
 # Instalar docker
 #
 	echo ""
@@ -113,18 +113,35 @@ if [[ $DESKTOP = ubuntu:GNOME || $DESKTOP = ubuntu || $DESKTOP = GNOME || $DESKT
 	echo ""
 	echo -e "${AZUL}Downloading the docker image, please be patient...${NORMAL}"
 	echo ""
-  sudo docker pull aosucas499/guadalinex:hga
+  sudo docker pull aosucas499/guadalinex:sigala
 
-# Ejecutar y probar contenedor
-chmod +x hgr-server
-chmod +x hgr
-sudo cp cga-hgr-server.svg /usr/share/icons/
-#sudo cp hgr.desktop /etc/xdg/autostart
-sudo cp hgr.desktop /usr/share/applications
-sudo cp hgr-server.desktop /usr/share/applications
-
-#chmod +x ~/.config/autostart/smartdre.desktop
-clear
+# Hacer la aplicación cliente iniciable en cada reinicio y ambas, usables para cualquier usuario sin "sudo"
+#
+	echo ""
+	echo -e "${AZUL}Configurando la app para que arranque en cada inicio de sesión...${NORMAL}"
+	echo ""
+	echo -e "${AZUL}Settings up the app to boot at init...${NORMAL}"
+	echo ""
+	sudo cp cga-hgr-server.svg /usr/share/icons/
+	# hgr cliente. Se inicia desde el menú educación.
+	sudo cp hgr /usr/bin
+    	sudo chmod +x /usr/bin/hgr
+    	sudo chown root:root zz-hgr
+    	sudo chmod 0440 zz-hgr
+    	sudo cp zz-hgr /etc/sudoers.d/ 
+    	#sudo cp hgr.desktop /etc/xdg/autostart/
+    	sudo cp hgr.desktop /usr/share/applications/
+	# hgr server. No inicia en cada inicio. Se inicia desde el menú educación.
+	sudo cp hgr-server /usr/bin
+    	sudo chmod +x /usr/bin/hgr-server
+    	sudo chown root:root zz-hgr-server
+    	sudo chmod 0440 zz-hgr-server
+    	sudo cp zz-hgr-server /etc/sudoers.d/ 
+    	sudo cp hgr-server.desktop /usr/share/applications/
+	
+# Borrar las fuentes después de instalar
+	#cd ..
+	#sudo rm -r hgr-dre
 
 echo ""
 echo "Reinicie el sistema y la encontrará en el menú Educación"

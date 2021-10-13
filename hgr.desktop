@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=sh -c ~/hgr-dre/hgr
+Exec=sudo /usr/bin/hgr
 X-GNOME-Autostart-enabled=true
 NoDisplay=false
 Hidden=false

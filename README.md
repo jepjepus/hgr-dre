@@ -4,9 +4,7 @@ A script to download a docker image and run HGR applications from Guadalinex Edu
 
 Docker image based on:
 
-tag hgr: HGR applications using Repositories from Guadalinex edu next (Ubuntu 16 Xenial 32bits)
-
-tag sigala: Unstable Sigala applications using Repositories from Guadalinex edu 2013 (Ubuntu 12 Precise 64bits)
+tag hgr: HGR applications using Repositories from Guadalinex edu (Ubuntu 14 Trusty 32bits)
 
 
 Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
