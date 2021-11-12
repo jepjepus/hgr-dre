@@ -13,12 +13,9 @@ image_name=aosucas499/guadalinex:sigala
 #variable carpeta configuración para compartir con el contenedor
 STORAGE_FOLDER=/home/$SUDO_USER/HGR
 CONFIG_FOLDER=/home/$SUDO_USER/.HGR-CONFIG
-# variable del archivo necesario en el contenedor
-# y que crearemos en el host, contiene el 
-# nombre de usuario del cliente hgr 
 
-rm -r $STORAGE_FOLDER
-rm -r $CONFIG_FOLDER
+#rm -r $STORAGE_FOLDER
+#rm -r $CONFIG_FOLDER
 
 #Creamos carpeta para compartir con el container
 if [ -d "$STORAGE_FOLDER" ]; then
@@ -37,7 +34,8 @@ else
     chown -R $SUDO_USER:$SUDO_USER $CONFIG_FOLDER
 fi
 
-docker stop $container_name && docker rm $container_name
+docker stop $container_name 
+#&& docker rm $container_name
 
 if docker ps -a --format '{{.Names}}' | grep -Eq "^${container_name}\$"; then
    docker start ${container_name}
