@@ -12,15 +12,29 @@ image_name=aosucas499/guadalinex:sigala
 
 #variable carpeta configuración para compartir con el contenedor
 STORAGE_FOLDER=/home/$SUDO_USER/HGR
+CONFIG_FOLDER=/home/$SUDO_USER/.HGR-CONFIG
+# variable del archivo necesario en el contenedor
+# y que crearemos en el host, contiene el 
+# nombre de usuario del cliente hgr 
 
-sudo rm -r $STORAGE_FOLDER
+rm -r $STORAGE_FOLDER
+rm -r $CONFIG_FOLDER
 
+#Creamos carpeta para compartir con el container
 if [ -d "$STORAGE_FOLDER" ]; then
     echo "Carpeta $STORAGE_FOLDER existe"
 else
     echo "Creando carpeta $STORAGE_FOLDER"
     mkdir $STORAGE_FOLDER
     chown -R $SUDO_USER:$SUDO_USER $STORAGE_FOLDER
+fi
+
+if [ -d "$CONFIG_FOLDER" ]; then
+    echo "Carpeta $CONFIG_FOLDER existe"
+else
+    echo "Creando carpeta $CONFIG_FOLDER"
+    mkdir $CONFIG_FOLDER
+    chown -R $SUDO_USER:$SUDO_USER $CONFIG_FOLDER
 fi
 
 docker stop $container_name && docker rm $container_name
@@ -31,19 +45,21 @@ else
 
 #docker run -d --privileged --net=host --user=$(id -u $USER):$(id -g $USER) -e DISPLAY="$DISPLAY" --env DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" --volume /run/user/$UID/bus:/run/user/$UID/bus --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" --workdir="/home/$USER" --volume="$STORAGE_FOLDER:/home/$USER:rw" --volume="/etc/group:/etc/group:ro" --volume="/etc/passwd:/etc/passwd:ro" --volume="/etc/shadow:/etc/shadow:ro" --volume="/etc/sudoers.d:/etc/sudoers.d:ro" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" -v /dev:/dev --name ${container_name} ${image_name} /usr/bin/cga-hgr-client
 
-docker run -d --privileged \
+docker run -it --privileged \
 --net=host -e DISPLAY="$DISPLAY" \
---volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+--volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" \
 -v /dev:/dev \
 --workdir=/home/$SUDO_USER \
 --volume="/etc/group:/etc/group:ro" \
 --volume="/etc/passwd:/etc/passwd:ro" --volume="/etc/shadow:/etc/shadow:ro" \
 -e USER=$SUDO_USER -e GROUP=$SUDO_USER -e UID=$SUDO_UID -e GID=$SUDO_GID \
--v /home/$SUDO_USER:/home/$SUDO_USER:rw \
+-v $CONFIG_FOLDER:/home/$SUDO_USER:rw \
+-v $STORAGE_FOLDER:/home/$SUDO_USER/HGR:rw \
 --user=$(id -u $SUDO_USER):$(id -g $SUDO_USER) \
+--workdir=/home/$SUDO_USER/HGR \
 --name ${container_name} ${image_name}
-
+$CONFIG_FOLDER
 fi
 #--volume="$STORAGE_FOLDER:/root:rw"
-#--env DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" --volume /run/user/1000/bus:/run/user/1000/bus --volume="/run/dbus/sytem_bus_socket:/run/dbus/system_bus_socket"
+#--env DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" --volume /run/user/1000/bus:/run/user/1000/bus --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket"
