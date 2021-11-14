@@ -4,9 +4,13 @@ sudo rm -r /home/$USER/HGR
 
 sudo rm -r /home/$USER/HGR-SERVER
 
+sudo rm -r /home/$USER/.hgr
+
 sudo rm -r /home/$SUDO_USER/HGR
 
 sudo rm -r /home/$SUDO_USER/HGR-SERVER
+
+sudo rm -r /home/$SUDO_USER/.hgr
 
 sudo rm /etc/xdg/autostart/hgr.desktop
 
