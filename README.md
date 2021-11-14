@@ -6,9 +6,13 @@ Es una aplicación utilizada para el control del aula. Contiene dos aplicaciones
 
 Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
-[Más info del proyecto](https://github.com/aosucas499/hgr-dre/wiki)
+![](https://github.com/aosucas499/hgr-dre/raw/main/testing/hgr-info.jpg)
 
-![](https://github.com/aosucas499/hgr-dre/raw/hgr-working/testing/hgr-info.jpg)
+## USO
+
++ Encontrará los archivos compartidos entre el servidor y el cliente en la carpeta **HGR** ubicada en su carpera de usuario del sistema.
+
++ Solo podrá compartir los archivos alojados en la carpeta **HGR** entre el servidor y el cliente. Si necesita compartir algún archivo alojado en otra carpeta, haga una copia o muévalo a dicha carpeta.
 
 ## INSTALL
 
