@@ -129,7 +129,7 @@ if [[ $DESKTOP = ubuntu:GNOME || $DESKTOP = ubuntu || $DESKTOP = GNOME || $DESKT
     	sudo chown root:root zz-hgr
     	sudo chmod 0440 zz-hgr
     	sudo cp zz-hgr /etc/sudoers.d/ 
-    	#sudo cp hgr.desktop /etc/xdg/autostart/
+    	sudo cp hgr.desktop /etc/xdg/autostart/
     	sudo cp hgr.desktop /usr/share/applications/
 	# hgr server. No inicia en cada inicio. Se inicia desde el menú educación.
 	sudo cp hgr-server /usr/bin
