@@ -43,7 +43,7 @@ if docker ps -a --format '{{.Names}}' | grep -Eq "^${container_name}\$"; then
    docker start ${container_name}
 else
 
-docker run -it --privileged \
+docker run -d --privileged \
 --net=host -e DISPLAY="$DISPLAY" \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" \
