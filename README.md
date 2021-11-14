@@ -1,15 +1,14 @@
 # hgr-dre
 
-A script to download a docker image and run HGR applications from Guadalinex Edu Next (Ubuntu 16 Xenial 32bits).
+Aplicación dockerizada HGR Sigala.
 
-Docker image based on:
-
-tag hgr: HGR applications using Repositories from Guadalinex edu (Ubuntu 14 Trusty 32bits)
-
+Es una aplicación utilizada para el control del aula. Contiene dos aplicaciones, un cliente utilizado en los pc's del alumnado y un servidor al que se conectan los clientes. 
 
 Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 [Más info del proyecto](https://github.com/aosucas499/hgr-dre/wiki)
+
+![](https://github.com/aosucas499/hgr-dre/raw/hgr-working/testing/hgr-info.jpg)
 
 ## INSTALL
 
@@ -27,9 +26,7 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
     
     ./install-hgr-dre
     
-    ./hgr-server (servidor HGR)
-    
-    ./hgr (cliente HGR)
+    sudo reboot (Reboot the system - Reiniciar el sistema)
 
 
 

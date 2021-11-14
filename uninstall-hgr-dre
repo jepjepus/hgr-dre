@@ -18,6 +18,10 @@ sudo rm  /usr/share/applications/hgr.desktop
 
 sudo rm  /usr/share/applications/hgr-server.desktop
 
+sudo rm /usr/bin/hgr
+
+sudo rm /usr/bin/hgr-server
+
 sudo docker stop hgr-server hgr-client hgr testing
 
 sudo docker rm hgr-server hgr-client hgr testing
