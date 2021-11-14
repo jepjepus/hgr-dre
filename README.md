@@ -26,9 +26,7 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
     
     ./install-hgr-dre
     
-    ./hgr-server (servidor HGR)
-    
-    ./hgr (cliente HGR)
+    sudo reboot (Reboot the system - Reiniciar el sistema)
 
 
 
