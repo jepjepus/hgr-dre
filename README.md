@@ -17,24 +17,30 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 ## FUNCIONA
 
 ### SERVIDOR
-
 + Listado de clientes conectados
 + Compartición de archivos con los clientes (los archivos tienen que estar en la carpeta HGR)
-+ 
- 
-## CLIENTE
-
-+
++ Ejecutar aplicación en cliente
++ Enviar archivos multimedia al cliente
++ Enviar mensajes al cliente
++ Apagar pc del cliente
++ Reiniciar pc del cliente
+### CLIENTE
++ Enviar archivos al servidor (los archivos tienen que estar en la carpeta HGR)
++ Solicitar ayuda al servidor
 
 ## NO FUNCIONA
 
 ### SERVIDOR
-
 + Documento colaborativo
- 
-## CLIENTE
-
-+
++ Recibir demostración de la pantalla del servidor.
++ Bloquear clientes
++ Bloquear Internet en los clientes
+### CLIENTE
++ Visualizar la pantalla del cliente desde el servidor.
++ Tomar control de la pantalla del cliente desde el servidor.
++ Abrir libreoffice writer desde el servidor
++ Abrir navegador de Internet desde el servidor 
++ Realizar capturas de pantalla desde el servidor
 
 ## INSTALL
 
