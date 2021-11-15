@@ -32,7 +32,7 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 ### SERVIDOR
 + Documento colaborativo
-+ Recibir demostración de la pantalla del servidor.
++ Recibir demostración de la pantalla del servidor en el cliente.
 + Bloquear clientes
 + Bloquear Internet en los clientes
 ### CLIENTE
