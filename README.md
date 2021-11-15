@@ -14,6 +14,28 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 + Solo podrá compartir los archivos alojados en la carpeta **HGR** entre el servidor y el cliente. Si necesita compartir algún archivo alojado en otra carpeta, haga una copia o muévalo a dicha carpeta.
 
+## FUNCIONA
+
+### SERVIDOR
+
++ Listado de clientes conectados
++ Compartición de archivos con los clientes (los archivos tienen que estar en la carpeta HGR)
++ 
+ 
+## CLIENTE
+
++
+
+## NO FUNCIONA
+
+### SERVIDOR
+
++ Documento colaborativo
+ 
+## CLIENTE
+
++
+
 ## INSTALL
 
     cd ~
