@@ -19,6 +19,7 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 ### SERVIDOR
 + Listado de clientes conectados
 + Compartición de archivos con los clientes (los archivos tienen que estar en la carpeta HGR)
++ Recibir demostración de la pantalla del servidor en el cliente.
 + Ejecutar aplicación en cliente
 + Enviar archivos multimedia al cliente
 + Enviar mensajes al cliente
@@ -32,7 +33,6 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 ### SERVIDOR
 + Documento colaborativo
-+ Recibir demostración de la pantalla del servidor en el cliente.
 + Bloquear clientes
 + Bloquear Internet en los clientes
 ### CLIENTE
