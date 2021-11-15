@@ -42,6 +42,9 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 + Abrir navegador de Internet desde el servidor 
 + Realizar capturas de pantalla desde el servidor
 
+**Algunas de las funciones que no estan disponibles** parece que son funciones del servidor pero son debido a dockerizar el cliente, el servidor no encuentra en el sistema del cliente esas aplicaciones o funciones. Estas funciones funcionarán si el servidor se instala en educaAndOS plus, Ubuntu o Linux Mint desde este proyecto y el cliente es el original instalado en Guadalinex Edu, Next o [Minino TDE](https://github.com/aosucas499/minino-TDE)
+
+
 ## INSTALL
 
     cd ~
