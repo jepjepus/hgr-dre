@@ -23,8 +23,13 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 + Ejecutar aplicación en cliente
 + Enviar archivos multimedia al cliente
 + Enviar mensajes al cliente
++ Bloquear clientes
++ Bloquear Internet en los clientes
 + Apagar pc del cliente
 + Reiniciar pc del cliente
++ Visualizar la pantalla del cliente desde el servidor.
++ Tomar control de la pantalla del cliente desde el servidor.
++ Realizar capturas de pantalla del cliente desde el servidor
 ### CLIENTE
 + Enviar archivos al servidor (los archivos tienen que estar en la carpeta HGR)
 + Solicitar ayuda al servidor
@@ -33,16 +38,11 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 ### SERVIDOR
 + Documento colaborativo
-+ Bloquear clientes
-+ Bloquear Internet en los clientes
-### CLIENTE
-+ Visualizar la pantalla del cliente desde el servidor.
-+ Tomar control de la pantalla del cliente desde el servidor.
-+ Abrir libreoffice writer desde el servidor
-+ Abrir navegador de Internet desde el servidor 
-+ Realizar capturas de pantalla desde el servidor
 
-**Algunas de las funciones que no estan disponibles** parece que son funciones del servidor pero son debido a dockerizar el cliente, el servidor no encuentra en el sistema del cliente esas aplicaciones o funciones. Estas funciones funcionarán si el servidor se instala en educaAndOS plus, Ubuntu o Linux Mint desde este proyecto y el cliente es el original instalado en Guadalinex Edu, Next o [Minino TDE](https://github.com/aosucas499/minino-TDE)
+### CLIENTE (estas funciones se podría implementar pero solo engordaría el tamaño de la imagen y no las veo necesarias)
++ Abrir libreoffice writer desde el servidor
++ Abrir navegador de Internet desde el servidor
+
 
 
 ## INSTALL
