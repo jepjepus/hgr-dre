@@ -48,6 +48,7 @@ docker run -d --privileged \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 --volume="/run/dbus/system_bus_socket:/run/dbus/system_bus_socket" \
 -v /dev:/dev \
+--ipc=host \
 --volume="/etc/group:/etc/group:ro" \
 --volume="/etc/passwd:/etc/passwd:ro" --volume="/etc/shadow:/etc/shadow:ro" \
 -e USER=$SUDO_USER -e GROUP=$SUDO_USER -e UID=$SUDO_UID -e GID=$SUDO_GID \
