@@ -14,6 +14,8 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 + Solo podrá compartir los archivos alojados en la carpeta **HGR** entre el servidor y el cliente. Si necesita compartir algún archivo alojado en otra carpeta, haga una copia o muévalo a dicha carpeta.
 
++ Manual del programa original, [aquí](http://www.juntadeandalucia.es/educacion/cga/portal/wp-content/uploads/2017/03/Manual_de-_Usuario_HGR.pdf).
+
 ## FUNCIONA
 
 ### SERVIDOR
