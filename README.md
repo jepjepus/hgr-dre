@@ -4,6 +4,8 @@ Aplicación dockerizada HGR Sigala.
 
 Es una aplicación utilizada para el control del aula. Contiene dos aplicaciones, un cliente utilizado en los pc's del alumnado y un servidor al que se conectan los clientes. 
 
+Compatible con Ubuntu 20.04 Focal, Linux Mint (20, 20.1, 20.2) y EducaAndOS, sistema basado en Ubuntu Focal 20.04.
+
 Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 ![](https://github.com/aosucas499/hgr-dre/raw/main/testing/hgr-info.jpg)
