@@ -12,7 +12,7 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 
 ## USO
 
-+ Encontrará los archivos compartidos entre el servidor y el cliente en la carpeta **HGR** ubicada en su carpera de usuario del sistema.
++ Encontrará los archivos compartidos entre el servidor y el cliente en la carpeta **HGR** ubicada en su carpeta de usuario del sistema.
 
 + Solo podrá compartir los archivos alojados en la carpeta **HGR** entre el servidor y el cliente. Si necesita compartir algún archivo alojado en otra carpeta, haga una copia o muévalo a dicha carpeta.
 
@@ -43,7 +43,7 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 ### SERVIDOR
 + Documento colaborativo
 
-### CLIENTE (estas funciones se podría implementar pero solo engordaría el tamaño de la imagen y no las veo necesarias)
+### CLIENTE (estas funciones se podrían implementar pero solo engordaría el tamaño de la imagen y no las veo necesarias)
 + Abrir libreoffice writer desde el servidor
 + Abrir navegador de Internet desde el servidor
 
@@ -73,7 +73,7 @@ Gracias al equipo del CGA de la Consejería de la Junta de Andalucía.
 Si este proyecto te ayuda, puedes invitarme a un café.
 
 
-If this project helps you,  you can give me a cup of coffee .
+If this project helps you, you can give me a cup of coffee.
 
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=FUMT27MVTRTHJ&no_recurring=0&item_name=Proyectos+TIC+Andaluc%C3%ADa&currency_code=EUR)
